@@ -1,12 +1,24 @@
-import "react";
+import React, {useState} from "react";
 
+import { getImageUrl } from "../../utils.js";
 import styles from "./Navbar.module.css"
 
+
+
 export const Navbar = () =>{
-    return <nav className= {styles.navbar}>
+    const[menuOpen, setMenuOpen] = useState(false);
+    return (<nav className= {styles.navbar}>
         <a className = {styles.title} href = "/">Mukunthan Sriram Balaji</a>
         <div className= {styles.menu}>
-            <ul className= {styles.menuItems}>
+            <img 
+            className= {styles.menuBtn} 
+            src= {menuOpen 
+                ? getImageUrl("/nav/closeIcon.png") 
+                : "/react-portfolio/assets/nav/ham.png"} 
+            alt={menuOpen ? "Close menu" : "Open menu"}
+            onClick={() => setMenuOpen(!menuOpen)}
+            />
+            <ul className= {`${styles.menuItems} ${menuOpen && styles.menuOpen}`}>
                 <li>
                     <a href="#about">About</a>
                 </li>
@@ -21,5 +33,5 @@ export const Navbar = () =>{
                 </li>
             </ul>
         </div>
-    </nav>;
+    </nav>);
 };
