@@ -14,11 +14,13 @@ export const Navbar = () =>{
             className= {styles.menuBtn} 
             src= {menuOpen 
                 ? getImageUrl("/nav/closeIcon.png") 
-                : "/react-portfolio/assets/nav/ham.png"} 
+                : getImageUrl("/nav/menuIcon.png")} 
             alt={menuOpen ? "Close menu" : "Open menu"}
             onClick={() => setMenuOpen(!menuOpen)}
             />
-            <ul className= {`${styles.menuItems} ${menuOpen && styles.menuOpen}`}>
+            <ul className= {`${styles.menuItems} ${menuOpen && styles.menuOpen}`} 
+            onClick={() => setMenuOpen(false)}
+            >
                 <li>
                     <a href="#about">About</a>
                 </li>
