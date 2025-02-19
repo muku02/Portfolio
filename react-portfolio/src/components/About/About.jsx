@@ -36,7 +36,7 @@ export const About = () => {
                         />
                         <h3>DB & Cloud Developer</h3>
                         <p>
-                            I'm a Databse and Cloud Developer with experience in Database design, Development, optimization and effectively utilizing AWS cloud services like EC2, S3 and AWS bedrock
+                            I'm a Database and Cloud Developer with experience in Database design, Development, optimization and effectively utilizing AWS cloud services like EC2, S3 and AWS bedrock
                         </p>
                     </li>
                 </ul>
